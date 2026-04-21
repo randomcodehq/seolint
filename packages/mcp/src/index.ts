@@ -8,7 +8,11 @@ import { z } from "zod"
 // apex, and Node's undici-based fetch sometimes drops the POST body across
 // 308 hops, causing connect/start to silently fail.
 const API_BASE = process.env.SEOLINT_API_URL ?? "https://seolint.dev"
-const VERSION = "0.1.9"
+// Keep in sync with package.json. Surfaced in the User-Agent header sent
+// to seolint.dev/api/v1/*, the CLI --version output, doctor/connect
+// headers, and anywhere else we want to tell the user which build
+// they're running.
+const VERSION = "0.2.2"
 
 // Read the API key live from process.env each call so doctor/connect can mutate
 // it after resolving from a host config file.
@@ -101,7 +105,10 @@ function authErrorHint(raw: string): string {
 
 const server = new McpServer({
   name: "seolint",
-  version: "0.1.0",
+  // Reported to MCP clients (Claude Code, Cursor, Windsurf, etc.) during
+  // the handshake — same VERSION constant as the CLI + User-Agent so all
+  // three surfaces agree.
+  version: VERSION,
 })
 
 // Tool: next_action — the "what should I do next" oracle.
