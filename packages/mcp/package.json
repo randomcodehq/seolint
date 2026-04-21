@@ -1,6 +1,6 @@
 {
   "name": "seolint-mcp",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MCP server for SEOLint — scan sites for SEO issues from Claude Desktop, Claude Code, Cursor, Windsurf, or any MCP client.",
   "type": "module",
   "bin": {
