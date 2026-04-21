@@ -1,6 +1,6 @@
 {
   "name": "seolint-scanner",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The open-source SEO scanner behind seolint.dev. Pure function: URL or HTML → structured issues. Zero-key, fully local, no network calls beyond fetching the target page.",
   "type": "module",
   "main": "./dist/index.js",
@@ -9,6 +9,18 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js"
+    },
+    "./markdown": {
+      "types": "./dist/markdown.d.ts",
+      "import": "./dist/markdown.js"
+    },
+    "./classify-page": {
+      "types": "./dist/classify-page.d.ts",
+      "import": "./dist/classify-page.js"
     }
   },
   "files": [
