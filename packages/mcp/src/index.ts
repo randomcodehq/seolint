@@ -707,7 +707,10 @@ async function runDoctor(): Promise<number> {
     console.log(`\nDoctor result: 1 problem found.\n`)
     return 1
   }
-  console.log(`${PASS} API key found ${DIM}(${resolvedKey.slice(0, 7)}… via ${keySource})${RESET}`)
+  // Don't echo any portion of the key — even a 7-char prefix is sensitive
+  // data in CodeQL's clear-text-logging rule, and the source label already
+  // tells the user which config they pulled from.
+  console.log(`${PASS} API key found ${DIM}(via ${keySource})${RESET}`)
 
   // Make sure subsequent fetches inside doctor send the resolved key
   process.env.SEOLINT_API_KEY = resolvedKey
