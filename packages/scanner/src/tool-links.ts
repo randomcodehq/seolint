@@ -1,0 +1,21 @@
+/** Maps scan issue IDs to free tool pages that help fix them */
+export const TOOL_LINKS: Record<string, { tool: string; label: string }> = {
+  "missing-title":        { tool: "/tools/meta-tag-generator",    label: "Generate meta tags" },
+  "title-too-long":       { tool: "/tools/serp-preview",          label: "Preview in Google" },
+  "title-too-short":      { tool: "/tools/serp-preview",          label: "Preview in Google" },
+  "missing-description":  { tool: "/tools/meta-tag-generator",    label: "Generate meta tags" },
+  "description-too-long": { tool: "/tools/serp-preview",          label: "Preview in Google" },
+  "description-too-short": { tool: "/tools/serp-preview",         label: "Preview in Google" },
+  "missing-og-tags":      { tool: "/tools/og-preview",            label: "Preview social share" },
+  "missing-twitter-card": { tool: "/tools/og-preview",            label: "Preview social share" },
+  "missing-json-ld":      { tool: "/tools/schema-generator",      label: "Generate schema markup" },
+  "invalid-json-ld":      { tool: "/tools/schema-generator",      label: "Generate schema markup" },
+  "incomplete-json-ld":   { tool: "/tools/schema-generator",      label: "Generate schema markup" },
+  "missing-robots-txt":   { tool: "/tools/robots-txt-generator",  label: "Generate robots.txt" },
+  "missing-canonical":    { tool: "/tools/meta-tag-generator",    label: "Generate meta tags" },
+  "missing-h1":           { tool: "/tools/serp-preview",          label: "Preview in Google" },
+  "multiple-h1":          { tool: "/tools/serp-preview",          label: "Preview in Google" },
+  "missing-hreflang":     { tool: "/tools/meta-tag-generator",    label: "Generate meta tags" },
+  "hreflang-invalid-lang": { tool: "/tools/meta-tag-generator",   label: "Generate meta tags" },
+  "hreflang-missing-self": { tool: "/tools/meta-tag-generator",   label: "Generate meta tags" },
+}

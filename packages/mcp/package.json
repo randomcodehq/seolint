@@ -1,0 +1,47 @@
+{
+  "name": "seolint-mcp",
+  "version": "0.2.0",
+  "description": "MCP server for SEOLint — scan sites for SEO issues from Claude Desktop, Claude Code, Cursor, Windsurf, or any MCP client.",
+  "type": "module",
+  "bin": {
+    "seolint-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randomcodehq/seolint.git",
+    "directory": "packages/mcp"
+  },
+  "homepage": "https://seolint.dev",
+  "bugs": "https://seolint.dev/docs/mcp",
+  "license": "MIT",
+  "author": "Random Code",
+  "keywords": [
+    "mcp",
+    "seo",
+    "claude",
+    "seolint",
+    "audit",
+    "ai"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "rimraf": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

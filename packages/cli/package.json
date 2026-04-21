@@ -1,0 +1,44 @@
+{
+  "name": "seolint-cli",
+  "version": "0.1.0",
+  "description": "Scan any website for SEO issues from your terminal. `seolint` is taken on npm (Zillow's legacy package), so we publish as `seolint-cli`.",
+  "type": "module",
+  "bin": {
+    "seolint-cli": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randomcodehq/seolint.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://seolint.dev",
+  "bugs": "https://github.com/randomcodehq/seolint/issues",
+  "license": "MIT",
+  "author": "Random Code",
+  "keywords": [
+    "seo",
+    "audit",
+    "cli",
+    "seolint",
+    "ai",
+    "claude"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "rimraf": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

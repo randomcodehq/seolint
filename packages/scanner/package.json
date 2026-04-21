@@ -1,0 +1,52 @@
+{
+  "name": "seolint-scanner",
+  "version": "0.1.0",
+  "description": "The open-source SEO scanner behind seolint.dev. Pure function: URL or HTML → structured issues. Zero-key, fully local, no network calls beyond fetching the target page.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randomcodehq/seolint.git",
+    "directory": "packages/scanner"
+  },
+  "homepage": "https://github.com/randomcodehq/seolint/tree/main/packages/scanner#readme",
+  "bugs": "https://github.com/randomcodehq/seolint/issues",
+  "license": "MIT",
+  "author": "Random Code",
+  "keywords": [
+    "seo",
+    "lint",
+    "linter",
+    "scanner",
+    "audit",
+    "seolint"
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "got-scraping": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "rimraf": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

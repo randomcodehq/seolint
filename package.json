@@ -1,0 +1,30 @@
+{
+  "name": "seolint-oss",
+  "private": true,
+  "description": "SEOLint — open-source scanner + MCP + CLI. Published as @seolint/scanner, seolint-mcp, seolint-cli.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randomcodehq/seolint.git"
+  },
+  "homepage": "https://seolint.dev",
+  "bugs": "https://github.com/randomcodehq/seolint/issues",
+  "license": "MIT",
+  "author": "Random Code",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present && rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

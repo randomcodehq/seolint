@@ -1,0 +1,24 @@
+{
+  "seo": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "description_min_chars": 80,
+    "description_max_chars": 160,
+    "min_internal_links": 1,
+    "max_url_length": 100
+  },
+  "performance": {
+    "lcp_good_ms": 2500,
+    "lcp_poor_ms": 4000,
+    "cls_good": 0.1,
+    "cls_poor": 0.25,
+    "inp_good_ms": 200,
+    "inp_poor_ms": 500,
+    "fcp_good_ms": 1800,
+    "fcp_poor_ms": 3000,
+    "ttfb_good_ms": 800,
+    "ttfb_poor_ms": 1800
+  },
+  "last_reviewed": "2026-03-29",
+  "notes": "All CWV thresholds match Google's official definitions (measured at p75 of field data). INP replaced FID as the official responsiveness CWV in March 2024. LCP/CLS/INP are the three confirmed ranking signals. FCP and TTFB are diagnostic only — not direct ranking factors, but leading indicators of LCP issues. Title 60-char limit is based on Google's ~580px pixel budget (renders differently per device but 60 chars is a safe universal target). Description 160-char limit is a CTR best practice; Google may rewrite descriptions anyway but having one prevents auto-generation from random body text. To update this file: research current Google CWV thresholds at web.dev/articles/vitals and update the numeric values. The notes field should explain what changed and why."
+}
