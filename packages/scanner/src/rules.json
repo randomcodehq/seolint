@@ -1,9 +1,9 @@
 {
   "seo": {
     "title_min_chars": 30,
-    "title_max_chars": 60,
+    "title_max_chars": 100,
     "description_min_chars": 80,
-    "description_max_chars": 160,
+    "description_max_chars": 200,
     "min_internal_links": 1,
     "max_url_length": 100
   },
@@ -19,6 +19,6 @@
     "ttfb_good_ms": 800,
     "ttfb_poor_ms": 1800
   },
-  "last_reviewed": "2026-03-29",
-  "notes": "All CWV thresholds match Google's official definitions (measured at p75 of field data). INP replaced FID as the official responsiveness CWV in March 2024. LCP/CLS/INP are the three confirmed ranking signals. FCP and TTFB are diagnostic only — not direct ranking factors, but leading indicators of LCP issues. Title 60-char limit is based on Google's ~580px pixel budget (renders differently per device but 60 chars is a safe universal target). Description 160-char limit is a CTR best practice; Google may rewrite descriptions anyway but having one prevents auto-generation from random body text. To update this file: research current Google CWV thresholds at web.dev/articles/vitals and update the numeric values. The notes field should explain what changed and why."
+  "last_reviewed": "2026-04-25",
+  "notes": "All CWV thresholds match Google's official definitions (measured at p75 of field data). INP replaced FID as the official responsiveness CWV in March 2024. LCP/CLS/INP are the three confirmed ranking signals. FCP and TTFB are diagnostic only — not direct ranking factors, but leading indicators of LCP issues. Title and description max-char limits are deliberately loose: Google's SERP snippet renders only ~60 title / ~160 description chars in the typical pixel budget, but the full string still feeds ranking + AI search citation, so we only flag titles >100 chars and descriptions >200 chars. Anything within the SERP budget passes silently; anything past it is reported as an info/warning suggestion, not a hard fail. To update this file: research current Google CWV thresholds at web.dev/articles/vitals and update the numeric values. The notes field should explain what changed and why."
 }

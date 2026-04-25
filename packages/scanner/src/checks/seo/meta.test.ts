@@ -17,7 +17,7 @@ describe("checkTitle", () => {
   })
 
   it("flags title too long", () => {
-    const longTitle = "A".repeat(65)
+    const longTitle = "A".repeat(105)
     const issues: RawIssue[] = []
     checkTitle(load(`<title>${longTitle}</title>`), issues)
     expect(issues[0].id).toBe("title-too-long")
@@ -47,7 +47,7 @@ describe("checkDescription", () => {
   })
 
   it("flags description too long and includes element", () => {
-    const longDesc = "A".repeat(165)
+    const longDesc = "A".repeat(205)
     const issues: RawIssue[] = []
     checkDescription(load(`<meta name="description" content="${longDesc}">`), issues)
     expect(issues[0].id).toBe("description-too-long")

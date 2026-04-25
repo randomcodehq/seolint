@@ -23,7 +23,7 @@ export function checkTitle($: CheerioAPI, issues: RawIssue[]) {
       category: "seo",
       severity: "warning",
       title: "Page title too long",
-      description: `Your title is ${title.length} characters. Google truncates titles above ${rules.seo.title_max_chars} characters in search results, hiding the end of your message.`,
+      description: `Your title is ${title.length} characters. Anything above ${rules.seo.title_max_chars} chars is well past Google's SERP pixel budget — most of the end will be hidden in search results, even though the full string still feeds ranking and AI citation.`,
       fix: `Shorten the title to under ${rules.seo.title_max_chars} characters. Current title: "${title}"`,
       element: `<title>${title}</title>`,
     })
@@ -62,7 +62,7 @@ export function checkDescription($: CheerioAPI, issues: RawIssue[]) {
       category: "seo",
       severity: "warning",
       title: "Meta description too long",
-      description: `Your description is ${desc.length} characters. Google truncates descriptions above ${rules.seo.description_max_chars} characters, cutting off your message.`,
+      description: `Your description is ${desc.length} characters. Anything above ${rules.seo.description_max_chars} chars is well past Google's SERP snippet budget — the tail will be hidden, even though Google may still index it.`,
       fix: `Shorten to under ${rules.seo.description_max_chars} characters. Current: "${desc.slice(0, 80)}…"`,
       element: `<meta name="description" content="${desc.slice(0, 200)}${desc.length > 200 ? "…" : ""}">`,
     })
